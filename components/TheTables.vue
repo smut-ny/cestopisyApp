@@ -26,12 +26,13 @@ export default {
           name: 'author',
           title: 'Autor',
           formatter(value) {
-            if(value){
-              const [ first, second, ...rest ] = value
-              return `${Object.values(first)} ${ second ? 'a ' + Object.values(second) : ''} `
-            }
-            else {
-              return ""
+            if (value) {
+              const [first, second, ...rest] = value
+              return `${Object.values(first)} ${
+                second ? 'a ' + Object.values(second) : ''
+              } `
+            } else {
+              return ''
             }
           },
         },
@@ -48,9 +49,6 @@ export default {
         },
       ],
     }
-  },
-  mounted() {
-    console.log(this.data)
   },
 }
 </script>

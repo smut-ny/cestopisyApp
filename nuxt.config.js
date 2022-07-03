@@ -15,6 +15,11 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      {
+        src: 'https://cdn.plot.ly/plotly-2.12.1.min.js',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
