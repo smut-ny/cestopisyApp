@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h2>{{ this.title }}</h2>
+    <h5>{{ metadata.title }}</h5>
+    <p>{{ metadata.description }}</p>
     <div ref="bar" style="width: 100%; height: auto"></div>
   </div>
 </template>
@@ -8,7 +9,7 @@
 <script>
 export default {
   name: 'Plotly',
-  props: ['x', 'y', 'title'],
+  props: ['x', 'y', 'metadata'],
   data() {
     return {
       barData: [

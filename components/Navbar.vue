@@ -6,11 +6,13 @@
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav>
-          <b-nav-item> 
+        <b-navbar-nav class="">
+          <li>
             <nuxt-link to="/database">Databáze</nuxt-link>
+          </li>
+          <li>
             <nuxt-link to="/graphs">Grafy</nuxt-link>
-          </b-nav-item>
+          </li>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -22,3 +24,13 @@ export default {
   name: 'Navbar',
 }
 </script>
+
+<style lang="scss" scoped>
+li {
+  margin-left: 10px;
+}
+
+.navbar {
+  margin-bottom: 60px;
+}
+</style>

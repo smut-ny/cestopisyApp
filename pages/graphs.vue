@@ -2,19 +2,16 @@
   <div>
     <Navbar />
     <b-container>
-      <h1>D3 Package <small>vue package</small></h1>
-      <D3Pie :x="magazines.data" />
-
-      <h1>Plotly <small>Non-vue package</small></h1>
       <Plotly
         :x="magazines.data.map((x) => x.title)"
         :y="magazines.data.map((x) => x.occurances)"
-        :title="magazines.metadata.title"
+        :metadata="magazines.metadata"
       />
+      <D3Pie :x="magazines.data" />
       <Plotly
         :x="yearPublished.data.map((x) => x.title)"
         :y="yearPublished.data.map((x) => x.occurances)"
-        :title="yearPublished.metadata.title"
+        :metadata="yearPublished.metadata"
       />
     </b-container>
   </div>
@@ -26,11 +23,19 @@ export default {
   data() {
     return {
       magazines: {
-        metadata: { title: 'Počet časopisů' },
+        metadata: {
+          title: 'Počet časopisů',
+          description:
+            'Grafy vizualizují v jakých časopisech byly cestopisné články sesbírány, v koláčovém grafu je zobrazen výběr deseti nejčetnějších časopisů.',
+        },
         data: this.generateMagazineData(this.$store.state.database),
       },
       yearPublished: {
-        metadata: { title: 'V jakém roce byly články vydány' },
+        metadata: {
+          title: 'V jakém roce byly články vydány',
+          description:
+            'Graf zobrazuje počet sesbíraných cestopisů v průřezu let od počátku devatenáctého století po rok 1918.',
+        },
         data: this.generateYearPublishedData(this.$store.state.database),
       },
     }
