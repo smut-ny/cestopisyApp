@@ -1,7 +1,13 @@
 <template>
   <div>
-    <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand href="#">Databáze cestopisů</b-navbar-brand>
+    <b-navbar toggleable="lg" type="light" variant="faded" fixed="top">
+      <b-navbar-brand href="/">
+        <img
+          class="navbar-logo"
+          src="http://cvc.upol.cz/wp-content/uploads/2020/09/CVC_horizontalni_dlouhe-v1.jpg"
+          alt=""
+        />
+      </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -12,6 +18,9 @@
           </li>
           <li>
             <nuxt-link to="/graphs">Grafy</nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="/about">O projektu</nuxt-link>
           </li>
         </b-navbar-nav>
       </b-collapse>
@@ -26,11 +35,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-li {
-  margin-left: 10px;
+@media (min-width: 992px) {
+  .navbar-nav {
+    gap: 25px;
+  }
+  .navbar {
+    gap: 50px;
+  }
 }
 
 .navbar {
-  margin-bottom: 60px;
+  background-color: white;
+  box-shadow: 0px 10px 49px 0px rgba(0, 0, 0, 0.07);
+}
+
+.navbar-logo {
+  max-width: 200px;
 }
 </style>

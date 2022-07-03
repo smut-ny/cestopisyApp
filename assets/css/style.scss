@@ -1,9 +1,29 @@
+$color-secondary: #61ce70;
+h3 {
+  color: $color-secondary;
+}
+
+h6 {
+  color: black;
+}
+
 a,
 a:hover {
-  text-decoration: none;
-  color: white;
+  text-transform: none;
+  color: $color-secondary;
 }
 
 a:hover {
   opacity: 0.7;
+  font-weight: 500;
+}
+
+a.with-arrow {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.container {
+  margin-top: 120px;
 }

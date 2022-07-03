@@ -2,6 +2,7 @@
   <div>
     <Navbar />
     <b-container>
+      <h1>Datová vizualizace</h1>
       <Plotly
         :x="magazines.data.map((x) => x.title)"
         :y="magazines.data.map((x) => x.occurances)"

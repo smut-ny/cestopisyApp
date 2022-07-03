@@ -1,10 +1,14 @@
 <template>
-  <vuetable
-    ref="vuetable"
-    :fields="fields"
-    :api-mode="false"
-    :data="data"
-  ></vuetable>
+  <div>
+    <client-only>
+      <vuetable
+        ref="vuetable"
+        :fields="fields"
+        :api-mode="false"
+        :data="data"
+      ></vuetable>
+    </client-only>
+  </div>
 </template>
 
 <script>
