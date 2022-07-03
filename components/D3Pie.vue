@@ -1,6 +1,10 @@
 <template>
   <div>
-    <D3PieChart :config="pie_config" :datum="x" :height="600"></D3PieChart>
+    <D3PieChart
+      :config="pie_config"
+      :datum="pie_data"
+      :height="600"
+    ></D3PieChart>
   </div>
 </template>
 
@@ -29,8 +33,15 @@ export default {
           duration: 350,
           ease: 'easeLinear',
         },
+        pie_data: this.assignPieData(),
       },
     }
+  },
+  methods: {
+    assignPieData() {
+      this.x.sort((a, b) => b.occurances - a.occurances)
+      this.pie_data = this.x.slice(0, 10)
+    },
   },
 }
 </script>

@@ -39,27 +39,6 @@ export default {
     onlyUnique(value, index, self) {
       return self.indexOf(value) === index
     },
-    countOccuranceInArray(array, name) {
-      var count = 0
-
-      array.forEach((e) => {
-        if (e == name) count++
-      })
-
-      return { title: name, occurances: count }
-    },
-    Rtable(data) {
-      const table = []
-      let titleNames = data.filter(this.onlyUnique)
-
-      titleNames.forEach((titleName) => {
-        if (titleName != undefined) {
-          table.push(this.countOccuranceInArray(data, titleName))
-        }
-      })
-
-      return table
-    },
     generateMagazineData(database) {
       const titles = []
 
@@ -68,7 +47,7 @@ export default {
         titles.push(title)
       }
 
-      return this.Rtable(titles)
+      return this.$Rtable(titles)
     },
     generateYearPublishedData(database) {
       const years = []
@@ -80,7 +59,7 @@ export default {
       }
 
       // Clean bad data
-      let data = this.Rtable(years)
+      let data = this.$Rtable(years)
       data = data.filter((e) => {
         return e.title > 1700
       })
