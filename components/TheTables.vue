@@ -19,18 +19,34 @@ export default {
       data: this.$store.state.database,
       fields: [
         {
-          name: "title",
-          title: "Článek"
+          name: 'title',
+          title: 'Článek',
         },
         {
-          name: "author",
-          title: "Autor"
+          name: 'author',
+          title: 'Autor',
+          formatter(value) {
+            if(value){
+              const [ first, second, ...rest ] = value
+              return `${Object.values(first)} ${ second ? 'a ' + Object.values(second) : ''} `
+            }
+            else {
+              return ""
+            }
+          },
         },
         {
-          name: "container-title",
-          title: "Časopis"
-        }
-      ]
+          name: 'container-title',
+          title: 'Časopis',
+        },
+        {
+          name: 'issued.date-parts',
+          title: 'Rok vydání',
+          formatter(value) {
+            return value + ''
+          },
+        },
+      ],
     }
   },
   mounted() {

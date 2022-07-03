@@ -1,7 +1,6 @@
 <template>
 <div>
   <Navbar />
-  <TheDatabase />
 </div>
 </template>
 

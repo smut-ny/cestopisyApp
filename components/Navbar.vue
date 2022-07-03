@@ -8,6 +8,7 @@
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
           <b-nav-item> 
+            <nuxt-link to="/database">Databáze</nuxt-link>
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
