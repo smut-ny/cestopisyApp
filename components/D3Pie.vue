@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>D3 Package</h1>
     <D3PieChart :config="pie_config" :datum="x" :height="600"></D3PieChart>
   </div>
 </template>

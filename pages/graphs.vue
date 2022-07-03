@@ -2,6 +2,7 @@
   <div>
     <Navbar />
     <b-container>
+      <h1>D3 Package <small>vue package</small></h1>
       <D3Pie :x="magazines.data" />
 
       <h1>Plotly <small>Non-vue package</small></h1>
