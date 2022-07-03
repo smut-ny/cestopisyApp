@@ -1,10 +1,10 @@
 <template>
-<div>
-  <Navbar />
-  <b-container>
-  <TheGraph />
-  </b-container>
-</div>
+  <div>
+    <Navbar />
+    <b-container>
+      <D3Pie />
+    </b-container>
+  </div>
 </template>
 
 <script>
