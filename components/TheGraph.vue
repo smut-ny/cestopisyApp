@@ -57,7 +57,7 @@ export default {
       this.chart_data = final_data
     },
   },
-  mounted() {
+  beforeMount() {
     this.generateChartData(this.database)
   },
 }
