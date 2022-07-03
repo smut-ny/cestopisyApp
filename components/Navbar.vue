@@ -9,6 +9,7 @@
         <b-navbar-nav>
           <b-nav-item> 
             <nuxt-link to="/database">Databáze</nuxt-link>
+            <nuxt-link to="/graphs">Grafy</nuxt-link>
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
