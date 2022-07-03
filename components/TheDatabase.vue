@@ -2,15 +2,16 @@
   <div>
     <b-container> 
         <TheHeading text="Databáze" />
-        {{ $store.state.database }}
-    </b-container>
+        <TheTables />
+    </b-container> 
   </div>
 </template>
 
 <script>
 import TheHeading from './TheHeading.vue'
+import TheTables from './TheTables.vue'
 export default {
-  components: { TheHeading },
+  components: { TheHeading, TheTables },
   name: 'TheDatabase'
 }
 </script>
